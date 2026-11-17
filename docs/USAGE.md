@@ -33,7 +33,7 @@ SD:/cardputer/dictionary/
 
 ## 方式 A：由 Tactility 安装 .app
 
-从 Release 下载 `.app` 并核对 SHA256。在设备启用 Tactility Web Server，在电脑浏览器打开设备显示的地址，进入 **Apps** 页，选择安装/上传 App，将 `.app` 上传。服务端调用原生 App 安装器完成解包及 manifest 解析。电脑与设备需要互相可达，不使用本文作者的本地 IP。
+从 Release 下载 `.app.zip`，解压得到 `.app`，并核对 SHA256。ZIP 只是 GitHub 下载封装，不要将 ZIP 本身上传到设备。在设备启用 Tactility Web Server，在电脑浏览器打开设备显示的地址，进入 **Apps** 页，选择安装/上传 App，将 `.app` 上传。服务端调用原生 App 安装器完成解包及 manifest 解析。电脑与设备需要互相可达，不使用本文作者的本地 IP。
 
 本包约 15MB，小于 0.7.0 Web Server 的 20MiB App 上传上限。需在 SD 上预留安装包临时文件和解包资源的空间，建议在词库音频之外再留至少 50MB。安装成功后刷新 App 列表；若仍未显示，重启系统。不要把系统固件 `.bin` 上传到 App 安装入口。
 

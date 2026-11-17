@@ -45,7 +45,7 @@
 ## 安装速览
 
 1. 设备为 **T-Vibe-Dev / T-Deck 类硬件、ESP32-S3**，运行 Tactility **0.7.0**。T-Vibe-Pager、T-Deck Pro 等不在本次验证范围。
-2. 从 [Releases](https://github.com/LucaZhang7784/Vibe-Dict-for-Lili-Go/releases) 下载 `VibeDictionary-0.2.0-esp32s3.app`，核对同页 `SHA256SUMS.txt`。
+2. 从 [Releases](https://github.com/LucaZhang7784/Vibe-Dict-for-Lili-Go/releases) 下载 `VibeDictionary-0.2.0-esp32s3.app.zip`，解压取得 `.app`，核对同页 `SHA256SUMS.txt`。
 3. 首选在设备 Web Server 的 **Apps** 页上传 `.app`，由 Tactility 安装；也可按 [使用说明](docs/USAGE.md) 将 App 完整目录放入 `SD:/app/local.tvibe.dictionary/`；词库及 WAV 放入 `SD:/cardputer/dictionary/`，然后重启系统扫描 App。
 4. 词库和音频沿用原有 [cardputer_adv_dict](https://github.com/LucaZhang7784/cardputer_adv_dict) 数据，避免在两个仓库重复储存约 2.33GB 音频。完整下载音频需要 Git LFS，详见原仓库的许可说明。
 5. 如果遇到“进入页面几秒后触屏停止响应”，阅读 [固件补丁说明](firmware/README.md)。固件应用镜像不能替代 `.app` 包；不要套用本项目开发机的串口或 Flash 偏移。
