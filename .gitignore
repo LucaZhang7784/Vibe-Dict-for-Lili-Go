@@ -1,0 +1,12 @@
+build/
+font-source/
+*.log
+__pycache__/
+sdkconfig.old
+release/local.tvibe.dictionary/
+release/*.app
+release/package-manifest.json
+release-assets/
+*.bin.bak
+backup*/
+.env*

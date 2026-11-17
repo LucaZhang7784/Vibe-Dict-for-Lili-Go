@@ -1,0 +1,16 @@
+diff --git a/Devices/lilygo-tdeck/Source/devices/Display.cpp b/Devices/lilygo-tdeck/Source/devices/Display.cpp
+index 6f2831f..c323eff 100644
+--- a/Devices/lilygo-tdeck/Source/devices/Display.cpp
++++ b/Devices/lilygo-tdeck/Source/devices/Display.cpp
+@@ -17,7 +17,10 @@ static std::shared_ptr<tt::hal::touch::TouchDevice> createTouch() {
+         true,
+         false,
+         GPIO_NUM_NC,
+-        GPIO_NUM_16
++        // T-Vibe-Dev: keep native LVGL timer reads active across idle periods.
++        // Avoid IRQ-only wake while investigating the observed idle input stall.
++        // ponytail: polling costs idle power; restore IRQ mode after fixing its wake path.
++        GPIO_NUM_NC
+     );
+ 
+     return std::make_shared<Gt911Touch>(std::move(configuration));

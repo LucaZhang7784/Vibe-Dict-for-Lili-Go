@@ -1,0 +1,11 @@
+*.sh text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.bin binary
+*.patch text eol=lf
+*.txt text eol=lf
+*.lock text eol=lf
+sdkconfig text eol=lf
+NOTICE text eol=lf
